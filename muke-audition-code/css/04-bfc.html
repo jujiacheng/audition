@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style type="text/css">
+      .container {
+        background-color: #f1f1f1;
+      }
+      .left {
+        float: left;
+      }
+      .bfc {
+        overflow: hidden; /* 触发元素 BFC */
+      }
+    </style>
+  </head>
+  <body>
+    <!--
+        BFC：一块独立渲染区域，内部元素的渲染不会影响边界以外的元素，
+        形成bfc的条件：float不是none，position是absolute或fixed，overflow不是visible，display是flex inline-block等
+    -->
+    <div class="container bfc">
+      <img src="https://www.imooc.com/static/img/index/logo.png" class="left" style="magin-right: 10px" />
+      <p class="bfc">某一段文字……</p>
+    </div>
+  </body>
+</html>

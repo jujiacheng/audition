@@ -5,7 +5,7 @@
 
     <!-- 自定义 v-model -->
     <p>{{ name }}</p>
-    <CustomVModel v-model="name" />
+    <!-- <CustomVModel v-model="name" /> -->
 
     <!-- nextTick -->
     <!-- <NextTick/> -->
@@ -31,27 +31,27 @@
     <!-- <KeepAlive/> -->
 
     <!-- mixin -->
-    <!-- <MixinDemo /> -->
+    <MixinDemo />
   </div>
 </template>
 
 <script>
-import CustomVModel from './CustomVModel';
+// import CustomVModel from './CustomVModel';
 // import NextTick from './NextTick'
 // import SlotDemo from './SlotDemo'
 // import ScopedSlotDemo from './ScopedSlotDemo'
 // import KeepAlive from './KeepAlive'
-// import MixinDemo from './MixinDemo'
+import MixinDemo from './MixinDemo';
 
 export default {
   components: {
-    CustomVModel
+    // CustomVModel
     // NextTick
     // SlotDemo,
     // ScopedSlotDemo,
     // FormDemo: () => import('../BaseUse/FormDemo'),
     // KeepAlive
-    // MixinDemo
+    MixinDemo
   },
   data() {
     return {

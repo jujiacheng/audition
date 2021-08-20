@@ -49,7 +49,7 @@ click(str,event){
 
 ```
     			// 子组件:
-    			<template>
+    		<template>
     		    <div>
     		        <span @click="giveMsg">点击</span>
     		    </div>
@@ -174,7 +174,11 @@ export defalut{ mixns: ['myMixin'], data() {
   - modules：每个 module 都有自己的 state，getters，mutation，action 实现大型应用中业务模块数据的分治
 
 ## vue 原理
-
+### 组件化(如何理解MVVM模型)
+- 传统组件，只是静态渲染，还要依赖操作DOM
+- 现在实现了数据驱动视图-MVVM
+- model--》viewModel--》DOM
+- vue通过Object.defineProperty和发布订阅者模式实现了数据驱动视图，get中通过dep收集依赖，然后在set中发布消息给watcher，watcher订阅了dep，收到消息后，更新视图
 ### 响应式
 
 - vue2 通过 Object.defineProperty 改写数据的 get 与 set 实现对 对象 变化的监听

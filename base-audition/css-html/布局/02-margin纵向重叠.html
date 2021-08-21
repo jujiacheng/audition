@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>02-margin纵向重叠.html</title>
+    <style>
+      .myP {
+        font-size: 16px;
+        line-height: 1;
+        margin-top: 10px;
+        margin-bottom: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1>02-margin纵向重叠.html</h1>
+      <p>相邻元素的margin-top和margin-bottom会发生重叠，空白内容的p元素的margin也会重叠</p>
+    </div>
+    <div>
+      <p class="myP">AAA</p>
+      <p class="myP"></p>
+      <p class="myP"></p>
+      <p class="myP"></p>
+      <p class="myP">BBB</p>
+    </div>
+  </body>
+</html>

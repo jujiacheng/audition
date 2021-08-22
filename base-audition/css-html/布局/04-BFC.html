@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>04-BFC</title>
+    <style>
+      .container {
+        background-color: #f1f1f1;
+      }
+      .left {
+        float: left;
+      }
+      .bfc {
+        overflow: hidden; /* 触发元素 BFC */
+      }
+    </style>
+  </head>
+  <body>
+    <h1>04-BFC</h1>
+    <p>块级格式化上下文</p>
+    <p>一块独立渲染的区域，内部元素的渲染不会影响边界以外的元素</p>
+    <p>bfc形成的条件</p>
+    <ul>
+      <li>float不是none</li>
+      <li>position是absolute或fixed</li>
+      <li>overflow不是visible</li>
+      <li>display是flex inline-block</li>
+    </ul>
+    <div class="container bfc">
+      <img src="https://www.imooc.com/static/img/index/logo.png" class="left" style="margin-right: 10px" />
+      <p class="bfc">某一段文字……</p>
+    </div>
+  </body>
+</html>

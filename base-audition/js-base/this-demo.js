@@ -17,6 +17,7 @@ const zhangsan = {
     console.log('zhangsansayHi', this);
   },
   wait() {
+    // 这个是在setTimeout触发的执行
     setTimeout(function () {
       // this === window
       console.log('zhangsanwait', this);

@@ -174,11 +174,14 @@ export defalut{ mixns: ['myMixin'], data() {
   - modules：每个 module 都有自己的 state，getters，mutation，action 实现大型应用中业务模块数据的分治
 
 ## vue 原理
-### 组件化(如何理解MVVM模型)
-- 传统组件，只是静态渲染，还要依赖操作DOM
+
+### 组件化(如何理解 MVVM 模型)
+
+- 传统组件，只是静态渲染，还要依赖操作 DOM
 - 现在实现了数据驱动视图-MVVM
 - model--》viewModel--》DOM
-- vue通过Object.defineProperty和发布订阅者模式实现了数据驱动视图，get中通过dep收集依赖，然后在set中发布消息给watcher，watcher订阅了dep，收到消息后，更新视图
+- vue 通过 Object.defineProperty 和发布订阅者模式实现了数据驱动视图，get 中通过 dep 收集依赖，然后在 set 中发布消息给 watcher，watcher 订阅了 dep，收到消息后，更新视图
+
 ### 响应式
 
 - vue2 通过 Object.defineProperty 改写数据的 get 与 set 实现对 对象 变化的监听
@@ -490,7 +493,7 @@ setup() {
 - 移除.sync
 - 异步组件的写法（defineAsyncComponent(()=>import('...'))）
 - 移除 filter
-- teleport
+- teleport--to="body",内置组件
 - Suspense
 - Composition API
 

@@ -247,7 +247,7 @@ Object.defineProperty(data, 'name', {
 
 1. 解析模板为 render 函数(或者在开发环境已经完成，vue-loader)
 2. 触发响应式，监听 data，属性 getter 和 setter
-3. 执行 render 函数，生成 v 弄的，patch(elem, vnode)
+3. 执行 render 函数，生成 v-node，patch(elem, vnode)
 
 #### 更新过程
 
@@ -321,7 +321,7 @@ Object.defineProperty(data, 'name', {
 
 - mounted：js 是单线程，ajax 异步获取数据；放在 mounted 之前没用，只会让逻辑更加混乱
 
-### 如何将组件所有 props 传给所有的自组件
+### 如何将组件所有 props 传给所有的子组件
 
 - $props
 `vue

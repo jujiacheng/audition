@@ -37,7 +37,10 @@
    array.reduce(function(total, currentValue, currentIndex, arr), initialValue)
   ```
 - promise 的用法，解决了什么问题
+
   - 回调地狱
+
+- setTimeout 和 setTimeInterval 有什么区别
 
 ## http 协议
 

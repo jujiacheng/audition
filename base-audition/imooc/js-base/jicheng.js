@@ -1,15 +1,16 @@
-function Person(name) {
+function Human(name) {
   this.name = name;
 }
-Person.prototype.sayName = function () {
-  console.log(this.name);
-};
-function Student(name, school) {
-  Person.call(this, name);
-  this.school = school;
+Human.prototype.run = function () {};
+
+function Man(name) {
+  // 属性继承
+  Human.call(this, name);
+  this.gender = '男';
 }
-Student.prototype = Object.create(Person);
-Student.prototype.constructor = Student;
-Student.prototype.saySchool = function () {
-  console.log(this.school);
-};
+var f = function () {};
+// 继承Human 方法
+f.prototype = Human.prototype;
+Man.prototype = new f();
+
+Man.prototype.fight = function () {};
